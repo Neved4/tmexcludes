@@ -33,7 +33,7 @@ maintain consistent settings across [macOS] installations.
 ## Getting Started
 
 > [!NOTE]
-> _This utility is only intended to work in macOS._
+> _**This utility is only intended to work in macOS.**_
 
 If you have [`brew`] installed, just run:
 ```sh
@@ -58,6 +58,37 @@ Commands:
   load <file> Load excludes from file
   system      List built-in system excludes
 ```
+
+## Examples
+
+> [!WARNING]
+> _**Always backup your settings first before modifying `defaults`.**_
+
+List the exclusion settings:
+
+```sh
+$ tmexcludes list
+(
+    "/opt/homebrew",
+    "/usr/local/texlive"
+)
+```
+
+Write all exclusion settings into output:
+```sh
+$ tmexcludes dump > excludes.plist
+(
+    "/opt/homebrew",
+    "/usr/local/texlive"
+)
+```
+
+Restore the settings at a later point:
+```sh
+$ tmexcludes load excludes.plist
+```
+
+Done!
 
 ## Standards
 
