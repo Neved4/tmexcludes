@@ -6,6 +6,12 @@
 Fast, light [macOS] utility that shows, backups and restores
 the list of excludes in [Time Machine]'s System Preferences.
 
+<div align="center">
+  <img src="https://github.com/Neved4/tmexcludes/assets/63655535/69bd9283-e616-4338-9b2a-e43a8bb6cb04" alt="Image Description" style="width: 85%" />
+
+  ###### _Catpuccin Mocha_ theme, _Menlo_ font.
+</div>
+
 ## Motivation
 
 Thse excluded paths are stored in
@@ -67,7 +73,7 @@ Commands:
 List the exclusion settings:
 
 ```sh
-$ tmexcludes list
+$ ./tmexcludes.sh list
 (
     "/opt/homebrew",
     "/usr/local/texlive"
@@ -76,7 +82,7 @@ $ tmexcludes list
 
 Write all exclusion settings into output:
 ```sh
-$ tmexcludes dump > excludes.plist
+$ ./tmexcludes.sh dump > excludes.plist
 (
     "/opt/homebrew",
     "/usr/local/texlive"
@@ -85,7 +91,7 @@ $ tmexcludes dump > excludes.plist
 
 Restore the settings at a later point:
 ```sh
-$ tmexcludes load excludes.plist
+$ ./tmexcludes.sh load excludes.plist
 ```
 
 Done!
