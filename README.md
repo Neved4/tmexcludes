@@ -14,7 +14,7 @@ array. Running a basic `cp` and `mv` on the `.plist` file can take care of
 backing up and restoring these settings.
 
 [`tmexcludes`] was made to extract and manage these exclusions, making it
-easier to perofrm intermediate steps. With this in mind, one could, let's
+easier to perform intermediate steps. With this in mind, one could, let's
 say, automate certain tasks on specific folders if they are in present in
 the list. This utility streamlines the overall process, making easier to
 maintain consistent settings across [macOS] installations.
