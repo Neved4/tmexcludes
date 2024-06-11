@@ -3,8 +3,9 @@
 
 ## `tmexcludes` - Manage Time Machine exclusions! 🔄
 
-Fast, light [macOS] utility that shows, backups and restores
-the list of excludes in [Time Machine]'s System Preferences.
+Fast, light [macOS] utility that shows, backups and restores the list of
+files and folders you have excluded from [Time Machine]. These can also
+be managed from the [Time Machine] pane of System Settings.
 
 <div align="center">
   <img src="https://github.com/Neved4/tmexcludes/assets/63655535/69bd9283-e616-4338-9b2a-e43a8bb6cb04" alt="Image Description" style="width: 85%" />
@@ -43,10 +44,10 @@ maintain consistent settings across [macOS] installations.
 
 If you have [`brew`] installed, just run:
 ```sh
-$ brew install Neved4/tap/tmbackup
+$ brew install Neved4/tap/tmexcludes
 ```
 
-Otherwise, first clone the repo:
+Otherwise, clone the repo:
 ```sh
 $ git clone https://github.com/Neved4/tmexcludes
 ```
@@ -117,4 +118,4 @@ This repository is licensed under the terms of the [MIT License][MIT License].
 [macOS]: https://www.apple.com/macos/
 [MIT License]: https://opensource.org/license/mit/
 [POSIX.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/
-[Time Machine]: https://support.apple.com/en-gb/guide/mac-help/mh35860/14.0/mac/14.0
+[Time Machine]: https://support.apple.com/guide/mac-help/back-up-files-mh35860/mac
