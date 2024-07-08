@@ -15,16 +15,31 @@ be managed from the [Time Machine] pane of System Settings.
 
 ## Motivation
 
-Thse excluded paths are stored in
-`/Library/Preferences/com.apple.TimeMachine.plist` within the `SkipPaths`
-array. Running a basic `cp` and `mv` on the `.plist` file can take care of
-backing up and restoring these settings.
+[`tmexcludes`] allows extracting and manage Time Machine exclusions
+independently of other settings, making it easier to sync multiple
+workstations and add further processing in between the processes.
 
-[`tmexcludes`] was made to extract and manage these exclusions, making it
-easier to perform intermediate steps. With this in mind, one could, let's
-say, automate certain tasks on specific folders if they are in present in
-the list. This utility streamlines the overall process, making easier to
-maintain consistent settings across [macOS] installations.
+For example, one could automate certain tasks on specific folders, provided
+they are in present in the list. [`tmexcludes`] streamlines the overall
+workflow, making easier to maintain consistent settings across [macOS]
+installs.
+
+These _excluded paths_ are saved in
+`/Library/Preferences/com.apple.TimeMachine.plist`, stored inside the
+`SkipPaths` array. Running a basic `cp`, `mv` on the `.plist` file could take
+care of backing up and restoring these settings.
+
+Additionally, [macOS] provides an alternative way of managing with `defaults`:
+```sh
+# Store the .plist path into a variable
+$ plist="/Library/Preferences/com.apple.TimeMachine.plist"
+
+# Export our Time Machine settings
+$ defaults export $plist TimeMachineConfig.plist
+
+# Load our saved settings
+$ defaults import $plist TimeMachineConfig.plist
+```
 
 ## Highlights
 
@@ -44,10 +59,10 @@ maintain consistent settings across [macOS] installations.
 
 If you have [`brew`] installed, just run:
 ```sh
-$ brew install Neved4/tap/tmexcludes
+$ brew install Neved4/tap/tmbackup
 ```
 
-Otherwise, clone the repo:
+Otherwise, first clone the repo:
 ```sh
 $ git clone https://github.com/Neved4/tmexcludes
 ```
@@ -118,4 +133,4 @@ This repository is licensed under the terms of the [MIT License][MIT License].
 [macOS]: https://www.apple.com/macos/
 [MIT License]: https://opensource.org/license/mit/
 [POSIX.1-2017]: https://pubs.opengroup.org/onlinepubs/9699919799/
-[Time Machine]: https://support.apple.com/guide/mac-help/back-up-files-mh35860/mac
+[Time Machine]: https://support.apple.com/en-gb/guide/mac-help/mh35860/14.0/mac/14.0
