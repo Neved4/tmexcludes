@@ -1,14 +1,14 @@
 #!/bin/sh
 set -Cefu
 
-tm='/Library/Preferences/com.apple.TimeMachine'
+plist='/Library/Preferences/com.apple.TimeMachine.plist'
 
 tm_exclude_list() {
-	defaults read $tm SkipPaths
+	defaults read $plist SkipPaths
 }
 
 tm_exclude_write() {
-	sudo defaults write $tm SkipPaths -array "$@"
+	sudo defaults write $plist SkipPaths -array "$@"
 }
 
 tm_exclude_load() {
