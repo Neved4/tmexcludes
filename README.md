@@ -1,7 +1,7 @@
-![Shell Script](https://img.shields.io/badge/Shell_Script-9DDE66?logo=gnubash&logoColor=000&style=for-the-badge)
-![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=fff)
+![Shell Script](https://img.shields.io/badge/Shell_Script-9DDE66?logo=gnubash&logoColor=000&style=flat)
+![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=fff&style=flat)
 
-## `tmexcludes` - Manage Time Machine exclusions! 🔄
+## `tmexcludes` - Manage Time Machine exclusions! 🚀
 
 Fast, light [macOS] utility that shows, backups and restores the list of
 files and folders you have excluded from [Time Machine]. These can also
